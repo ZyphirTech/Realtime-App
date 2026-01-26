@@ -66,6 +66,10 @@ dependencies {
 
     //Dagger Hilt
     implementation(libs.dagger.hilt.android)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
     ksp(libs.dagger.hilt.compiler)
 //    implementation(libs.dagger.hilt.navigation)
 

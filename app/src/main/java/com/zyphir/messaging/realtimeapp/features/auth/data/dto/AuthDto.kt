@@ -8,6 +8,9 @@ data class LoginRequest(
 data class RegisterRequest(
     val phone: String,
     val nickname: String,
+    val bio: String?,
+    val avatarUrl: String?,
+    val status: String?,
     val password: String
 )
 
@@ -15,7 +18,3 @@ data class RefreshRequest(
     val refreshToken: String
 )
 
-data class AuthResponse(
-    val accessToken: String,
-    val refreshToken: String
-)
