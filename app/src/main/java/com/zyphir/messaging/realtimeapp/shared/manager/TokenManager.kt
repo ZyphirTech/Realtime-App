@@ -4,6 +4,7 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
@@ -21,6 +22,11 @@ class TokenManager @Inject constructor(private val dataStore : DataStore<Prefere
 
     suspend fun clear() {
         dataStore.edit { it.clear() }
+    }
+
+    suspend fun hasSession(): Boolean {
+        val token = refreshToken.first()
+        return token.isNotBlank()
     }
 
     companion object {

@@ -1,6 +1,5 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.ksp)
     alias(libs.plugins.dagger.hilt.android)
@@ -51,6 +50,11 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.navigation.runtime.ktx)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.material)
 
     // Retrofit
     implementation(libs.squareup.retrofit2.retrofit)
@@ -67,12 +71,8 @@ dependencies {
     //Dagger Hilt
     implementation(libs.dagger.hilt.android)
     implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.hilt.compose)
     ksp(libs.dagger.hilt.compiler)
-//    implementation(libs.dagger.hilt.navigation)
-
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

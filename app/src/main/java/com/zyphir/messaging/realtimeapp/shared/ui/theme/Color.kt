@@ -1,4 +1,4 @@
-package com.zyphir.messaging.realtimeapp.ui.theme
+package com.zyphir.messaging.realtimeapp.shared.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
